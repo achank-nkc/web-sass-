@@ -1,0 +1,100 @@
+//navbar
+.navbar {
+  background-color: $primary-color;
+  color: #fff;
+  height: 70px;
+
+  ul {
+    display: flex;
+  }
+  a {
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    transition: all 2s;
+  }
+  a:hover {
+    border-bottom: 2px #fff solid;
+  }
+  .flex {
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+  }
+}
+
+//showcase
+.showcase {
+  height: 400px;
+  background-color: $primary-color;
+  color: #fff;
+  position: relative;
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    margin: 10px 0;
+  }
+  .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+  }
+  .showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-content: flex-end;
+    animation: slideInFormRight 1s ease-in;
+    .form-control {
+      margin: 30px 0;
+    }
+    input[type="text"],
+    input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid #b4becb;
+      width: 100%;
+      padding: 3px;
+      font-size: 16px;
+      :focus {
+        outline: none;
+      }
+    }
+  }
+  .showcase-text {
+    animation: slideInFormLeft 1s ease-in;
+  }
+}
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+//features head
+.features-head,
+.docs-head {
+  img {
+    width: 200px;
+    justify-self: flex-end;
+  }
+}
+.features-sub-head {
+  img {
+    width: 300px;
+    justify-self: flex-end;
+  }
+}
